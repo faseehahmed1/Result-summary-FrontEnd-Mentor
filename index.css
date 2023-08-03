@@ -1,5 +1,7 @@
 @font-face {
     font-family: 'HankenGrotesk';
+    font-display: swap;
+    font-weight: 100 900;
     src: url('./assets/fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype');
 }
 
@@ -12,21 +14,49 @@
     --gradient-light-slate-blue-bg: hsl(252, 100%, 67%);
     --gradient-light-royal-blue-bg: hsl(241, 81%, 54%);
     --gradient-violet-blue-circle: hsla(256, 72%, 46%, 1);
-    --gradient-persian-blue: hsla(241, 72%, 46%, 0);
+    --gradient-persian-blue-circle: hsla(241, 72%, 46%, 0);
 
     --neutral-white: hsl(0, 0%, 100%);
     --neutral-pale-blue: hsl(221, 100%, 96%);
     --neutral-light-lavender: hsl(241, 100%, 89%);
     --neutral-dark-gray-blue: hsl(224, 30%, 27%);
+
+    --font-family-default: 'HankenGrotesk', sans-serif;
+  /* font weight */
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-black: 800;
+
+     /* font size */
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.75rem;
+    --fs-800: 2rem;
+    --fs-900: 5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: 0;
+    font: inherit;
 }
 
+img,
+  svg{
+    display: block;
+    max-width: 100%;
+  }
+
 body {
+    font-family: var(--font-family-default);
+    /* font-size: var(--fs-400); */
+    color: var(--clr-neutral-700);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -78,7 +108,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(var(--gradient-light-slate-blue-bg), var(--gradient-light-royal-blue-bg));
+    background: linear-gradient(var(--gradient-violet-blue-circle), var(--gradient-persian-blue-circle));
     font-size: 15px;
     margin-top: 25px;
     margin-bottom:  25px;
